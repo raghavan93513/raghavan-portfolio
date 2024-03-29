@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.adf3f548.css",
+    "main.js": "/static/js/main.14909bdc.js",
+    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "static/media/ProfilePic.png": "/static/media/ProfilePic.820d544c7716e9a76148.png",
+    "static/media/salary.png": "/static/media/salary.17a22360d5db699bc6a8.png",
+    "static/media/maskdetection.png": "/static/media/maskdetection.062df1880c86834f9630.png",
+    "static/media/mainlogo.png": "/static/media/mainlogo.5e0d7e29735ee4ffa404.png",
+    "static/media/Raghavan_Resume.pdf": "/static/media/Raghavan_Resume.decd510b7e8669613db8.pdf",
+    "static/media/graph.png": "/static/media/graph.fa78da348ca1ff5eb577.png",
+    "static/media/langchain.png": "/static/media/langchain.ff184007760eca85f756.png",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/sentiment.png": "/static/media/sentiment.3cbf641b58343d2f9338.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "main.adf3f548.css.map": "/static/css/main.adf3f548.css.map",
+    "main.14909bdc.js.map": "/static/js/main.14909bdc.js.map",
+    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adf3f548.css",
+    "static/js/main.14909bdc.js"
+  ]
+}
