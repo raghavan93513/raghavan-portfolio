@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/mainlogo.png";
 // import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 // import { CgGitFork } from "react-icons/cg";
@@ -14,6 +13,8 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { IoBookOutline } from "react-icons/io5";
+import { GiSkills } from "react-icons/gi";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,7 +39,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-        <img src={logo} className="img-fluid logo" alt="brand" />
+          <span className="logo-text">RV</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -78,6 +79,28 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/research"
+                onClick={() => updateExpanded(false)}
+              >
+                <IoBookOutline style={{ marginBottom: "2px" }} />{" "}
+                Research
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/skills"
+                onClick={() => updateExpanded(false)}
+              >
+                <GiSkills style={{ marginBottom: "2px" }} />{" "}
+                Skills
               </Nav.Link>
             </Nav.Item>
 

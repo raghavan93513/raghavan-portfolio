@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/Contactme.jpeg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -16,10 +15,63 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              THE TINY <span className="purple"> NAVIGATOR </span>
             </h1>
             <p className="home-about-body">
-              I fell in love with Artificial Intelligence and Development and I have at least learnt
+              I’m pretending this is a phone 📞 but it’s actually me telling you where everything is on my website. 
+              <br />
+              <br />
+              If you’re here to understand what my grown-up self does, 
+              
+              <ul>
+              <li>The 
+              <i>
+                <b className="purple" onClick={() => window.open("/about", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> About </b>
+              </i>              
+              section has a few more insights about what drives me
+              </li>
+
+              <li>The 
+              <i>
+                <b className="purple" onClick={() => window.open("/project", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> Projects </b>
+              </i>              
+               are the “look what I made” section. 
+              </li>
+
+              <li>The 
+              <i>
+                <b className="purple" onClick={() => window.open("/research", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> Research </b>
+              </i>
+              is where I turn big questions into real work, real results, and yes, real papers.
+              </li>
+
+              <li>The 
+              <i>
+                <b className="purple" onClick={() => window.open("/skills", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> Skills </b>
+              </i>
+              section is where I show my certifications and technical superpowers.
+              </li>
+
+              <li>The 
+              <i>
+                <b className="purple" onClick={() => window.open("/resume", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> Resume </b>
+              </i>
+              is the clean, official version of my accomplishments. 
+              </li>
+
+              <li>If you get lost, 
+              <i>
+                <b className="purple" onClick={() => window.open("/home", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}> RV Button </b>
+              </i>
+               at the top will take you back to the home page. 
+              </li>
+
+              </ul>
+              
+              Consider this my tiny hand wave 👋 from the flower field, and I’d be happy to connect with you using the links below.
+              
+              
+              {/* I fell in love with Artificial Intelligence and Development and I have at least learnt
               something, Hopefully… 🤷‍♂️
               <br />
               <br />I am fluent in classics like
@@ -49,7 +101,7 @@ function Home2() {
               &nbsp; like working with
               <i>
                 <b className="purple"> GPT-4 and Apache Spark</b>
-              </i>
+              </i> */}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -78,16 +130,6 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/AshwinRaghavan1"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
                   href="https://www.linkedin.com/in/raghavan-vaidhyaraman/"
                   target="_blank"
                   rel="noreferrer"
@@ -103,6 +145,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
+              
                   <AiFillInstagram />
                 </a>
               </li>
