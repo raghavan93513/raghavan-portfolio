@@ -20,6 +20,14 @@ function Skills() {
           Here are my professional certifications and credentials.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
+          <Col md={6} className="project-card">
+            <SkillsCard
+              title="Databricks Certified Machine Learning Associate"
+              certLink="https://credentials.databricks.com/b569512b-6fa2-4ba3-9335-cc68e3a97af0#acc.DWPLGmnq"
+            />
+          </Col>
+
           <Col md={6} className="project-card">
             <SkillsCard
               title="Databricks Certified Generative AI Engineer Associate"
@@ -68,12 +76,14 @@ function Skills() {
 
         <h1 className="project-heading">
           <strong className="purple">Technical Skillset </strong>
+          
         </h1>
-
+        <br></br>
+        <br></br>
         <h1 className="project-heading">
           <strong> Languages </strong>
         </h1>
-
+        <br></br>
         <Languages />
 
         <h1 className="project-heading">
