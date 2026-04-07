@@ -2,6 +2,24 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 
+export function AboutQuoteCard() {
+  return (
+    <Card className="quote-card-view">
+      <Card.Body>
+        <blockquote className="blockquote mb-0">
+          <p style={{ color: "rgb(155 126 172)", textAlign: "center" }}>
+            "If you are learning something new every day, Congrats, you are
+            winning"
+          </p>
+          <footer className="blockquote-footer text-center">
+            Raghavan Vaidhyaraman
+          </footer>
+        </blockquote>
+      </Card.Body>
+    </Card>
+  );
+}
+
 export function AboutCardProfessional() {
   return (
     <Card className="quote-card-view">
@@ -19,20 +37,52 @@ export function AboutCardProfessional() {
   );
 }
 
+export function AboutCardLeadership() {
+  return (
+    <Card className="quote-card-view">
+      <Card.Body>
+        <blockquote className="blockquote mb-0">
+          <p style={{ textAlign: "justify" }}>
+            Thrilled to have been a mentor and judge at the AI Hackathon at
+            IISc Bangalore, engaging with 120+ brilliant students who showcased
+            exceptional creativity, technical skill, and innovation.
+            Additionally, I have had the opportunity to manage and organise
+            events like Cryptic Hunt at GraVITas, VIT University's annual tech
+            carnival.
+          </p>
+        </blockquote>
+      </Card.Body>
+    </Card>
+  );
+}
+
 export function AboutCardPersonal() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-          At Becoming I Foundation (BIF-VIT), I led STEM sessions for 100+ students across multiple schools and guided volunteers to keep programs running. At Youth Red Cross (VIT), I partnered with hospitals, ran campus campaigns, and organized blood donation drives with 60+ donors each time. 
-            <br />
-            <br />
-            Some other activities that I love to do!
+            At Becoming I Foundation (BIF-VIT), I led STEM sessions for 100+
+            students across multiple schools and guided volunteers to keep
+            programs running. At Youth Red Cross (VIT), I partnered with
+            hospitals, ran campus campaigns, and organized blood donation drives
+            with 60+ donors each time.
           </p>
+        </blockquote>
+      </Card.Body>
+    </Card>
+  );
+}
+
+export function AboutActivitiesCard() {
+  return (
+    <Card className="quote-card-view">
+      <Card.Body>
+        <blockquote className="blockquote mb-0">
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Football, Basketball, Table Tennis and Gyming 🏋️‍♂️
+              <ImPointRight /> Football, Basketball, Table Tennis and Gyming
+              🏋️‍♂️
             </li>
             <li className="about-activity">
               <ImPointRight /> Jogging and Cycling 🚴
@@ -50,12 +100,6 @@ export function AboutCardPersonal() {
               <ImPointRight /> Travelling 🌍
             </li>
           </ul>
-          <br />
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "If you are learning something new everyday, Congrats you are winning"{" "}
-          </p> 
-          
-          <footer className="blockquote-footer">Raghavan Vaidhyaraman</footer>
         </blockquote>
       </Card.Body>
     </Card>

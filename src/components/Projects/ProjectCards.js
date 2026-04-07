@@ -1,40 +1,77 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
 function ProjectCards(props) {
+  const [flipped, setFlipped] = useState(false);
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
+  const handleClick = () => {
+    if (isMobile) setFlipped((f) => !f);
+  };
+
   return (
-    <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title><strong className="purple">{props.title}</strong></Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
+    <div
+      className={`flip-card${flipped ? " is-flipped" : ""}`}
+      onClick={handleClick}
+      onMouseEnter={() => !isMobile && setFlipped(true)}
+      onMouseLeave={() => !isMobile && setFlipped(false)}
+      aria-label={`${props.title} project card`}
+    >
+      <div className="flip-card-inner">
+        {/* FRONT */}
+        <div className="flip-card-front">
+          <img src={props.imgPath} alt={props.title} className="flip-card-img" />
+          <div className="flip-card-front-overlay">
+            <div className="flip-card-hint">
+              <span>{isMobile ? "Tap to explore" : "Hover to explore"} ✦</span>
+            </div>
+          </div>
+        </div>
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
-      </Card.Body>
-    </Card>
+        {/* BACK */}
+        <div className="flip-card-back">
+          <div className="flip-back-glow" />
+          <h3 className="flip-back-title">{props.title}</h3>
+          <p className="flip-back-desc">{props.description}</p>
+          <div className="flip-back-buttons">
+            <Button
+              variant="primary"
+              href={props.ghLink}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <BsGithub /> &nbsp;
+              {props.isBlog ? "Blog" : "GitHub"}
+            </Button>
+            {!props.isBlog && props.demoLink && (
+              <Button
+                variant="primary"
+                href={props.demoLink}
+                target="_blank"
+                rel="noreferrer"
+                style={{ marginLeft: "10px" }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <CgWebsite /> &nbsp;Demo
+              </Button>
+            )}
+          </div>
+          <div className="flip-back-tech">
+            {(props.techStack || []).map((tech) => (
+              <span className="flip-tag" key={tech}>
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
+
 export default ProjectCards;

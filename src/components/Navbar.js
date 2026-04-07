@@ -1,34 +1,64 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-// import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-// import { CgGitFork } from "react-icons/cg";
-// import { ImBlog } from "react-icons/im";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 import { IoBookOutline } from "react-icons/io5";
 import { GiSkills } from "react-icons/gi";
 
+const NAV_ITEMS = [
+  { path: "/", icon: <AiOutlineHome />, label: "Home" },
+  { path: "/about", icon: <AiOutlineUser />, label: "About" },
+  { path: "/project", icon: <AiOutlineFundProjectionScreen />, label: "Projects" },
+  { path: "/research", icon: <IoBookOutline />, label: "Research" },
+  { path: "/skills", icon: <GiSkills />, label: "Skills" },
+  { path: "/resume", icon: <CgFileDocument />, label: "Resume" },
+];
+
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const clickTimeoutRef = useRef(null);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    const scrollHandler = () => updateNavbar(window.scrollY >= 20);
+    window.addEventListener("scroll", scrollHandler, { passive: true });
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+
+  const isActive = (path) => {
+    if (path === "/") return location.pathname === "/";
+    return location.pathname.startsWith(path);
+  };
+
+  const handleBrandClick = (e) => {
+    e.preventDefault();
+    if (clickTimeoutRef.current) {
+      clearTimeout(clickTimeoutRef.current);
+      clickTimeoutRef.current = null;
+      window.dispatchEvent(new Event("rv-easter-egg"));
+      return;
     }
-  }
+    clickTimeoutRef.current = window.setTimeout(() => {
+      updateExpanded(false);
+      navigate("/");
+      clickTimeoutRef.current = null;
+    }, 220);
+  };
 
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    return () => {
+      if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current);
+    };
+  }, []);
 
   return (
     <Navbar
@@ -38,14 +68,12 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="/" className="d-flex" onClick={handleBrandClick}>
           <span className="logo-text">RV</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
+          onClick={() => updateExpanded(expand ? false : "expanded")}
         >
           <span></span>
           <span></span>
@@ -53,67 +81,21 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/research"
-                onClick={() => updateExpanded(false)}
-              >
-                <IoBookOutline style={{ marginBottom: "2px" }} />{" "}
-                Research
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/skills"
-                onClick={() => updateExpanded(false)}
-              >
-                <GiSkills style={{ marginBottom: "2px" }} />{" "}
-                Skills
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
-
+            {NAV_ITEMS.map(({ path, icon, label }) => (
+              <Nav.Item key={path}>
+                <Nav.Link
+                  as={Link}
+                  to={path}
+                  onClick={() => updateExpanded(false)}
+                  className={isActive(path) ? "nav-link-active" : ""}
+                >
+                  <span style={{ marginBottom: "2px", marginRight: "4px" }}>
+                    {icon}
+                  </span>
+                  {label}
+                </Nav.Link>
+              </Nav.Item>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
