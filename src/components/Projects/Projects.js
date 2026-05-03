@@ -10,6 +10,7 @@ import salary from "../../Assets/Projects/salary.png";
 const PROJECTS = [
   {
     imgPath: maskdetection,
+    imgFit: "contain",
     title: "Face Mask Detection",
     description:
       "Detects whether a person is wearing a face mask in real-time using PyTorch and a pre-trained ResNet50. Captures webcam video, applies face detection, and classifies each face as masked or unmasked.",
@@ -24,6 +25,7 @@ const PROJECTS = [
   },
   {
     imgPath: langchain,
+    imgFit: "contain",
     title: "Langchain Food Recommender",
     description:
       "Uses LangChain to split PDFs into chunks, converts them to embeddings via HuggingFace, stores in FAISS vector DB, and powers QA with OpenAI GPT-3.5 through LangChain's LLM-as-a-Service.",
@@ -40,7 +42,7 @@ const PROJECTS = [
     imgPath: sentiment,
     title: "Twitter Sentiment Analysis",
     description:
-      "Uses NLP and machine learning to dynamically analyze Twitter tweet sentiment — positive, negative, or neutral. Applicable in marketing, politics, and public relations.",
+      "Uses NLP and machine learning to dynamically analyze Twitter tweet sentiment (positive, negative, or neutral). Applicable in marketing, politics, and public relations.",
     ghLink: "https://github.com/raghavan93513/Twitter-Sentimental-Analysis",
     techStack: [
       "Python",

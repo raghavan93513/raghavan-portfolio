@@ -24,7 +24,12 @@ function ProjectCards(props) {
       <div className="flip-card-inner">
         {/* FRONT */}
         <div className="flip-card-front">
-          <img src={props.imgPath} alt={props.title} className="flip-card-img" />
+          <img
+            src={props.imgPath}
+            alt={props.title}
+            className="flip-card-img"
+            style={props.imgFit ? { objectFit: props.imgFit } : undefined}
+          />
           <div className="flip-card-front-overlay">
             <div className="flip-card-hint">
               <span>{isMobile ? "Tap to explore" : "Hover to explore"} ✦</span>

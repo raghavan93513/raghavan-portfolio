@@ -106,13 +106,19 @@ function Home2() {
                       RV Button{" "}
                     </b>
                   </i>
-                  at the top will take you back to the home page. Bonus:
-                  double-click it for a surprise.
+                  at the top will take you back to the home page.
                 </li>
               </ul>
               <p>
               Consider this my tiny hand wave 👋 from the flower field, and
               I'd be happy to connect with you using the links below.
+              </p>
+              <p className="easter-egg-hint">
+                <i>
+                  Psst psst… the{" "}
+                  <span className="purple">RV</span> button up top is hiding a
+                  little secret. Give it two quick taps and see what happens 🎉
+                </i>
               </p>
             </div>
           </Col>

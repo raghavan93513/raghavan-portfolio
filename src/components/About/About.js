@@ -23,12 +23,15 @@ function About() {
           </Col>
         </Row>
 
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row
+          style={{ justifyContent: "center", padding: "10px" }}
+          className="align-items-center"
+        >
           <Col
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
+              paddingTop: "50px",
               paddingBottom: "50px",
             }}
             className="reveal-left"
@@ -41,17 +44,20 @@ function About() {
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "50px", paddingBottom: "50px" }}
             className="about-img reveal-right"
           >
             <img src={laptopImg} alt="about" className="img-fluid about-float-img" />
           </Col>
         </Row>
 
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row
+          style={{ justifyContent: "center", padding: "10px" }}
+          className="align-items-center"
+        >
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "50px", paddingBottom: "50px" }}
             className="about-img reveal-left"
           >
             <img
@@ -64,41 +70,44 @@ function About() {
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
+              paddingTop: "50px",
               paddingBottom: "50px",
             }}
             className="reveal-right"
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Where I Lead and{" "}
-              <strong className="purple neon-text">Contribute</strong>
+              Where I {" "}
+              <strong className="purple neon-text">Participate</strong>
             </h1>
             <AboutCardLeadership />
           </Col>
         </Row>
 
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img reveal-left"
-          >
-            <img src={NGOImg} alt="NGO work" className="img-fluid about-float-img" />
-          </Col>
+        <Row
+          style={{ justifyContent: "center", padding: "10px" }}
+          className="align-items-center"
+        >
           <Col
             md={7}
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
+              paddingTop: "50px",
               paddingBottom: "50px",
             }}
-            className="reveal-right"
+            className="reveal-left"
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               Know Who I Am{" "}
               <strong className="purple neon-text">Personally</strong>
             </h1>
             <AboutCardPersonal />
+          </Col>
+          <Col
+            md={5}
+            style={{ paddingTop: "50px", paddingBottom: "50px" }}
+            className="about-img reveal-right"
+          >
+            <img src={NGOImg} alt="NGO work" className="img-fluid about-float-img" />
           </Col>
         </Row>
 

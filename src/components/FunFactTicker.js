@@ -1,16 +1,14 @@
 import React from "react";
 
 const FACTS = [
-  "🚀 80% runtime improvements delivered on Spark pipelines",
+  "🎙️ Delivered nationwide Spark tech talks in Databricks",
+  "🧑‍🏫 Mentored new engineers as an SME in Spark, Delta Lake & MLflow",
   "🏆 1st Runner-Up — Databricks Global Hackathon 2025",
-  "🤖 Built GPT-powered outreach tool that increased reply rates by 40%",
   "📚 2 published research papers in AI/ML",
-  "🌍 Led STEM sessions for 100+ students across multiple schools",
-  "🩸 Organized blood donation drives with 60+ donors each",
-  "💡 Authored 20+ enablement articles used globally at Databricks",
-  "🎙️ Delivered two nationwide Spark tech talks",
-  "🧑‍🏫 Mentored 8 engineers as an SME in Spark, Delta Lake & MLflow",
-  "☕ Fueled by chai, code, and the occasional banana 🍌",
+  "👨‍💻 Mentored and Judged AI Hackathons at IIT Madras and IISc Bangalore",
+  "🌍 Led STEM sessions for 100+ students across multiple schools (NGO)",
+  "🩸 Organized blood donation drives with 60+ donors each (NGO)",
+  "💡 Authored 20+ enablement articles used globally"
 ];
 
 function FunFactTicker() {

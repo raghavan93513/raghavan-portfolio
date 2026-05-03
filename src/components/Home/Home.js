@@ -34,12 +34,11 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                I'M
+                I'M{" "}
                 <strong
                   className="main-name glitch-text"
-                  data-text=" RAGHAVAN VAIDHYARAMAN"
+                  data-text="RAGHAVAN VAIDHYARAMAN"
                 >
-                  {" "}
                   RAGHAVAN VAIDHYARAMAN
                 </strong>
               </h1>
