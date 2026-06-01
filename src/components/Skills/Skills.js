@@ -23,26 +23,33 @@ function Skills() {
           
           <Col md={6} className="project-card">
             <SkillsCard
-              title="Databricks Certified Machine Learning Associate"
+              title="Databricks Certified Generative AI Engineer"
+              certLink="https://credentials.databricks.com/ed0d9350-221c-4ca3-bf68-c0ff0d7f167e#acc.92ABpud3"
+            />
+          </Col>
+          
+          <Col md={6} className="project-card">
+            <SkillsCard
+              title="Databricks Certified Developer for Apache Spark"
+              certLink="https://credentials.databricks.com/7625804d-ac48-4b04-9c3d-63901abf95b9#acc.anV1dzqx"
+            />
+          </Col>
+          
+          <Col md={6} className="project-card">
+            <SkillsCard
+              title="Databricks Certified Machine Learning"
               certLink="https://credentials.databricks.com/b569512b-6fa2-4ba3-9335-cc68e3a97af0#acc.DWPLGmnq"
             />
           </Col>
 
           <Col md={6} className="project-card">
             <SkillsCard
-              title="Databricks Certified Generative AI Engineer Associate"
-              certLink="https://credentials.databricks.com/ed0d9350-221c-4ca3-bf68-c0ff0d7f167e#acc.92ABpud3"
-            />
-          </Col>
-
-          <Col md={6} className="project-card">
-            <SkillsCard
-              title="Databricks Certified Data Engineer Associate"
+              title="Databricks Certified Data Engineer"
               certLink="https://credentials.databricks.com/10aadaf8-cedd-499d-bc63-c8e4b0552071#acc.w4jmOd2U"
             />
           </Col>
 
-          <Col md={6} className="project-card">
+          {/* <Col md={6} className="project-card">
             <SkillsCard
               title="Lakehouse Fundamentals"
               certLink="https://credentials.databricks.com/374f9956-18ab-462b-bf1a-00458805b62b#acc.oXJDz0T3"
@@ -54,12 +61,12 @@ function Skills() {
               title="Generative AI Fundamentals"
               certLink="https://credentials.databricks.com/d3272ef9-9a57-4121-a6b1-13bc6ef6de58#acc.d7QXBo0p"
             />
-          </Col>
+          </Col> */}
 
           <Col md={6} className="project-card">
             <SkillsCard
               title="IBM Certified Artificial Intelligence Analyst"
-              certLink="https://courses.ibmcep.cognitiveclass.ai/certificates/fe53aed3d98948179e976b4e9f239c22"
+              certLink="https://drive.google.com/file/d/1hKkNAhAGp6XlpCjf4pYd-FTAMkjoq-6u/view?usp=sharing"
             />
           </Col>
 
