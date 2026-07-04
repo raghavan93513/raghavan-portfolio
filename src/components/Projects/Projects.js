@@ -6,8 +6,26 @@ import langchain from "../../Assets/Projects/langchain.png";
 import maskdetection from "../../Assets/Projects/maskdetection.png";
 import sentiment from "../../Assets/Projects/sentiment.png";
 import salary from "../../Assets/Projects/salary.png";
+import tradingSignal from "../../Assets/Projects/trading_signal.png";
 
 const PROJECTS = [
+  {
+    imgPath: tradingSignal,
+    imgFit: "contain",
+    title: "Algorithmic Trading Signal Generator",
+    description:
+      "End-to-end Databricks ML platform that turns raw market data into next-day BUY/SELL signals for 50 S&P 500 stocks. Medallion lakehouse with 41 engineered features, AutoML baseline, PyTorch LSTM champion (87.5% test accuracy), real-time model serving, vector search, and a deployed Streamlit app.",
+    ghLink:
+      "https://github.com/raghavan93513/Algorithmic-Trading-Signal-Generator",
+    techStack: [
+      "Python",
+      "PyTorch",
+      "Databricks",
+      "Delta Lake",
+      "MLflow",
+      "Streamlit",
+    ],
+  },
   {
     imgPath: maskdetection,
     imgFit: "contain",

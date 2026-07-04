@@ -23,10 +23,13 @@ function ResearchCards(props) {
     >
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <img src={props.imgPath} alt={props.title} className="flip-card-img" />
-          <div className="flip-card-front-overlay">
-            <div className="flip-card-hint">
-              <span>{isMobile ? "Tap to explore" : "Hover to explore"} ✦</span>
+          <h3 className="flip-front-title">{props.title}</h3>
+          <div className="flip-card-img-wrap">
+            <img src={props.imgPath} alt={props.title} className="flip-card-img" />
+            <div className="flip-card-front-overlay">
+              <div className="flip-card-hint">
+                <span>{isMobile ? "Tap to explore" : "Hover to explore"} ✦</span>
+              </div>
             </div>
           </div>
         </div>
