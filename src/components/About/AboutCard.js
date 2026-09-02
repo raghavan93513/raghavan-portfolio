@@ -26,7 +26,10 @@ export function AboutCardProfessional() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Currently, I'm a <span className="purple"> Spark Solutions Engineer </span> at <span className="purple"> Databricks</span>, where I spend most of my days deep inside <span className="purple"> Apache Spark, Delta Lake and MLflow</span>, tuning slow pipelines, chasing down weird bugs, and helping teams ship faster. I genuinely love the puzzle of making things go fast, and the happiest when a tough problem finally clicks.
+            I'm currently pursuing my MS in Computer Science, with a Machine Learning pathway, at <span className="purple"> Columbia University</span>.
+            <br />
+            <br />
+            Before this, I was an Associate Spark Technical Solutions Engineer at <span className="purple"> Databricks</span>, where I spent most of my days deep inside <span className="purple"> Apache Spark, Delta Lake and MLflow</span>, tuning slow pipelines, chasing down weird bugs, and helping teams ship faster. I genuinely love the puzzle of making things go fast, and I'm happiest when a tough problem finally clicks.
             <br />
             <br />
             I enjoy mentoring new engineers, giving tech talks, and writing enablement articles. I also had a blast placing 1st runner-up at the Databricks Global Hackathon 2025 with Genie AI, our little voice-based assistant prototype. Before all this, I interned at Ideas2IT tinkering with a GPT-powered outreach tool, that's where I first fell in love with LLMs, embeddings and fine-tuning.
